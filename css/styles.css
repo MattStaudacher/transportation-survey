@@ -1,3 +1,14 @@
-#work-responses {
+body{
+  background-color: lightcyan;
+}
+
+.panel-modifier {
+  padding: 6px;
+}
+
+#responses-work {
+  display: none;
+}
+#responses-non-work {
   display: none;
 }

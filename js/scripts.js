@@ -1,10 +1,15 @@
-$(document).ready(function(){
+$(function(){
   $("form#transportation_survey").submit(function(event){
     event.preventDefault();
-    $("#work-responses").show();
-    $("input:checkbox[name=work-transportation]:checked").each(function(){
+    $("#responses-work").show();
+    $("input:checkbox[name=transport-work]:checked").each(function(){
       var workTransportationMode = $(this).val();
-      $('#work-responses').append(workTransportationMode + "<br>");
+      $('#responses-work').append(workTransportationMode + "<br>");
+    });
+    $("#responses-non-work").show();
+    $("input:checkbox[name=transport-non-work]:checked").each(function() {
+      var funTransportationMode = $(this).val();
+      $('#responses-non-work').append(funTransportationMode + "<br>");
     });
     $('#transportation_survey').hide();
   });
